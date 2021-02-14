@@ -101,12 +101,11 @@ const createSlider = () => {
   }, duration);
 }
 
+//pausing slider
 sliderContainer.addEventListener('mouseenter', function(e){
   clearInterval(timer);
-  console.log('entered');
 })
 sliderContainer.addEventListener('mouseleave', function(e){
-  console.log('out');
   timer = setInterval(function () {
     slideIndex++;
     changeSlide(slideIndex);
